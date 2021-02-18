@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>공비서 - 회원/매출/고객관리 프로그램(네일샵, 미용실 등)</title>
+
+    <meta name="공비서" content="Web">
+    <meta name="description" content="회원/매출/고객관리 프로그램(네일샵, 미용실 등)">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="공비서">
+    <meta property="og:title" content="공비서">
+    <meta property="og:description" content="회원/매출/고객관리 프로그램(네일샵, 미용실 등)">
+    <meta property="og:image" content="img/icon.png">
+    <meta property="og:url" content="">
+
+    <link rel="icon" href="img/icon.png">
+    <link rel="apple-touch-icon" href="img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/gong.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="js/gong.js"></script>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="section clearfix">
+            <div class="head-main bord side--left">
+                공대남의 비즈니스 서비스
+            </div>
+
+            <div class="inner bord">
+                <div class="menu-group float--left">
+                    <a href="#"><i class="fas fa-shopping-cart"></i>공비서 스토어 ></a>
+                </div>
+                <div class="menu-group float--right">
+                    <ul>
+                        <li><a href="#">마이페이지(샵주)</a></li>
+                        <li><a href="#" style="color:red">이용권정보</a></li>
+                        <li><a href="#">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="notice bord">알림</div>
+        </div>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <div class="center">
+        <div class="section section__main">
+
+            <!-- SIDEBAR -->
+            <div class="sideBar">
+                <div class="customerBox">
+                    <div class="customer">헤렌테스트</div>
+                    <div class="storeKeeper">점주 <span>테스트</span></div>
+                    <a href="#" class="employee">
+                        <p>직원</p>
+                        <ul>
+                            <li><img src="img/icon.png"></li>
+                            <li><img src="img/icon.png"></li>
+                            <li><img src="img/icon.png"></li>
+                        </ul>
+                        <p>0></p>
+                    </a>
+                </div>
+
+                <div class="album"><a href="#">우리샵 앨범<i class="far fa-image"></i></a></div>
+
+                <div class="sideBar__menu">
+                    <ul>
+                        <li style="color:rgb(39, 207, 212);">예약</li>
+                        <li><a href="#">예약 캘린더</a></li>
+                    </ul>
+                    <ul>
+                        <li>매출관리</li>
+                        <li><a href="#">매출 등록/목록</a></li>
+                        <li><a href="#">우리샵 매출</a></li>
+                        <li><a href="#">직원별 매출</a></li>
+                        <li><a href="#">고객별 매출</a></li>
+                    </ul>
+                    <ul>
+                        <li>고객관리</li>
+                        <li><a href="#">고객차트</a></li>
+                        <li><a href="#">회원권/포인트 관리</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">제품관리</a></li>
+                    </ul>
+                    <ul>
+                        <li>우리샵 관리</li>
+                        <li><a href="#">시술메뉴</a></li>
+                        <li><a href="#">포인트/행사</a></li>
+                        <li><a href="#">직원관리</a></li>
+                        <li><a href="#">화면 잠금 관리</a></li>
+                    </ul>
+                    <ul>
+                        <li>문자</li>
+                        <li><a href="#">문자 발송</a></li>
+                        <li><a href="#">발송 내역</a></li>
+                        <li><a href="#">문자충전/내역</a></li>
+                        <li><a href="#">자동문자 설정</a></li>
+                    </ul>
+                    <ul>
+                        <li>부가서비스</li>
+                        <li><a href="#">네이버 예약</a></li>
+                    </ul>
+                    <ul>
+                        <li>고객센터</li>
+                        <li><a href="#">사용법 안내</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">이벤트 게시판</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </div>
+                <div class="sideFoot">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>공비서스토어</p>
+                    <p>고객관리뿐만 아니라</p>
+                    <p>샵 재료까지 한번에!</p>
+                </div>
+            </div>
+
+
+            <!-- MAIN-CENTER -->
+            <div class="section__center clearfix">
+                <div class="subject">
+                    우리샵 앨범
+                </div>
+                <div class="albumMenu">
+                    <a href="#" id="albumMenu-album">앨범</a>
+                    <a href="#" id="albumMenu-art">이달의 아트</a>
+                </div>
+                <a href="#" class="addList"><i class="fas fa-plus-circle"></i>새로운 아트 등록</a>
+
+                <div class="albumList">
+                    <div class="album__art ">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p class="album__name" style="color:white">12</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">12원</p><p>회원가:12원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">11</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">11원</p><p>회원가:11원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">10</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">1010원</p><p>회원가:10원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">9</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">9원</p><p>회원가:9원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">8</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">8원</p><p>회원가:8원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">7</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">7원</p><p>회원가:7원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">6</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">6원</p><p>회원가:6원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">5</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">5원</p><p>회원가:5원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">4</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">4원</p><p>회원가:4원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">3</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">3원</p><p>회원가:3원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">2</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">2원</p><p>회원가:2원</p></div>
+                        </div>
+                    </div>
+                    <div class="album__art">
+                        <img src="img/icon.png">
+                        <div class="album__des">
+                            <p style="color:white">1</p>
+                            <p>1시간 소요</p>
+                            <div><p style="color:white">1원</p><p>회원가:1원</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>1</div>
+
+
+
+        <!-- POPUP -->
+        <div class="popup" id="popup">
+            <div class="popup__top">
+                <p>예약현황</p>
+                <button id="popup__btn-left">오늘</button>
+                <button id="popup__btn-right">날짜별</button>
+                <button id="popup__btn-close"><i class="fas fa-times"></i></button>
+                
+            </div>
+            <div class="popup__menu">
+                <div>전체(<p>3</p>)</div>
+                <div>예약(<p>3</p>)</div>
+                <div>시술중(<p>0</p>)</div>
+                <div>매출완료(<p>0</p>)</div>
+            </div>
+            <div class="popup__detail">
+                <div class="popup__detail-box">
+                    <div class="detail__date">
+                        <div><p id="nowMonth">월</p>.<p id="nowDate">일</p><p id="nowDay">요일</p></div>
+                        <div class="detail__date-time">09:30</div>
+                    </div>
+                    <div class="detail__des">
+                        <div>김고객(눈썹>자연 눈썹)</div>
+                        <div class="detail__des-down"><p style="color:rgb(21, 187, 187)">예약중</p>&nbsp; 담당자 담당자없음</div>
+                    </div>
+                    <a href="#"><i class="fas fa-pen">&nbsp;</i></a>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="popup__foot"></div>
+        </div>
+        <button id="popup__btn-open" ><i class="far fa-calendar-alt"></i></button>
+    </div>
+    
+
+    <!-- ALBUM__DETAIL-POPUP -->
+    <div class="album__detail">
+        <div class="album__detail-main">
+            <button id="album__detail__closeBtn"><i class="fas fa-times">&nbsp;</i></button>
+            <img src="img/icon.png" class="album__detail__img">
+            <div class="album__detail__name"><span></span></div>
+            <div class="detail--btnBox">
+                <button id="detail--delete" class="detail--btn">삭제</button>
+                <button id="detail--shift" class="detail--btn">수정</button>
+            </div>
+        </div>
+    </div>
+    <div class="album__detail-background"></div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foot foot--up">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보취급방침</a></li>
+                <li><a href="#">이용방법</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li>공비서<span>SNS</span></li>
+                <li><a href="#"><i class="fab fa-instagram-square">&nbsp;</i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-square">&nbsp;</i></a></li>
+                <li><a href="#"><i class="fas fa-blog">&nbsp;</i></a></li>
+            </ul>
+        </div>
+        <div class="foot foot--down">
+            <ul>
+                <li><span>(주)헤렌</span></li>
+                <li>대표이사:이한주</li>
+                <li>사업자등록번호 701-87-00540</li>
+                <li>고객센터 1600-3145</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
